@@ -136,7 +136,7 @@ static  void lua_msh(int argc, char **argv)
 			rt_kprintf("malloc failed at file: %s,line: %d", __FILE__, __LINE__);
 			return;
 		}
-		rt_memset(arg[1], 0, len+1);
+		memset(arg[1], 0, len+1);
 		strncpy(arg[1], argv[1], len);
 	}else{
 		arg[1] = NULL;

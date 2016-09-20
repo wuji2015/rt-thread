@@ -25,11 +25,21 @@
 LUA_EXLIBS_ROM
 #endif
 
+#include "luaopen.h"
 static const luaL_Reg lualibs[] = {
   {"", luaopen_base},
   {LUA_LOADLIBNAME, luaopen_package},
   {LUA_IOLIBNAME, luaopen_io},
   {LUA_STRLIBNAME, luaopen_string},    
+  {"gpio",luaopen_gpio},
+  {"adc",luaopen_adc},
+  { "file",luaopen_file},
+  { "dir",luaopen_dir},
+  { "net",luaopen_net},
+  { "iic",luaopen_iic},
+  { "spi",luaopen_spi},
+  { "pwm",luaopen_pwm},
+  { "wifi",luaopen_wifi},
 #if LUA_OPTIMIZE_MEMORY == 0
   {LUA_MATHLIBNAME, luaopen_math},
   {LUA_TABLIBNAME, luaopen_table},  

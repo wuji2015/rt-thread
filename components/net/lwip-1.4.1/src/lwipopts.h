@@ -408,5 +408,5 @@
 #ifndef SO_REUSE
 #define SO_REUSE                        0
 #endif
-
+#define LWIP_TCP_KEEPALIVE		1
 #endif /* __LWIPOPTS_H__ */
